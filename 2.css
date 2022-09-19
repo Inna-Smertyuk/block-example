@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    overflow: hidden;
+    outline: 1px solid red;
+}
+
+.block>div {
+    width: 700px;
+    background-color: #333;
+    position: relative;
+    left: -50%;
+    z-index: 1;
+}
+
+.block>div:nth-child(2) {
+    left: -100%;
+    background-color: #fff;
+    clip-path: polygon(65% 0%, 100% 50%, 65% 100%, 0% 100%, 35% 50%, 0% 0%);
+    width: 700px;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0 100px;
+
+}
+
+.block>div:nth-child(3) {
+    width: 80vw;
+    left: -85%;
+    background: url('https://klike.net/uploads/posts/2022-08/1660284974_25.jpg') 100% 85% /cover;
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+}
+
+@media (max-width: 1120px) {
+    .block>div:nth-child(3) {
+        width: 100vw;
+        left: 140px;
+    }
+}
+
+.line {
+    position: absolute;
+    background-color: #fff;
+    top: 6%;
+    height: 50%;
+    right: 35%;
+    width: 2px;
+    transform: rotate(-38deg);
+}
+
+.margin {
+    margin-left: 90px;
+
+}
+
+.margin :first-child {
+    margin-top: 70px;
+}
+
+.margin*:not(.margin) {
+    margin-bottom: 70px;
+}
+
+.item {
+    max-width: 200px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3px;
+    left: 0;
+    top: -20px;
+    height: 40px;
+    background-color: #999;
+}
+
+.title {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #333;
+}
+
+.title span:last-child {
+    display: block;
+    margin-left: 30px;
+}
