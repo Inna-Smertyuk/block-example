@@ -12,7 +12,7 @@
     outline: 1px solid red;
 }
 
-.block>div {
+.block > div {
     width: 700px;
     background-color: #333;
     position: relative;
@@ -20,7 +20,7 @@
     z-index: 1;
 }
 
-.block>div:nth-child(2) {
+.block > div:nth-child(2) {
     left: -100%;
     background-color: #fff;
     clip-path: polygon(65% 0%, 100% 50%, 65% 100%, 0% 100%, 35% 50%, 0% 0%);
@@ -33,16 +33,16 @@
 
 }
 
-.block>div:nth-child(3) {
+.block > div:nth-child(3) {
     width: 80vw;
-    left: -85%;
-    background: url('https://klike.net/uploads/posts/2022-08/1660284974_25.jpg') 100% 85% /cover;
+    left: -100%;
+    background: url('https://klike.net/uploads/posts/2022-08/1660284974_25.jpg') 100% 50% /cover;
     transition: all 0.5s ease-in-out;
     z-index: 0;
 }
 
 @media (max-width: 1120px) {
-    .block>div:nth-child(3) {
+    .block > div:nth-child(3) {
         width: 100vw;
         left: 140px;
     }
